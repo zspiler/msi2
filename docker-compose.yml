@@ -7,16 +7,13 @@ services:
       - "5000:5000"
   db:
     image: "mongo:4.2"
-    # environment: 
-    #   MONGO_INITDB_ROOT_USERNAME: root
-    #   MONGO_INITDB_ROOT_PASSWORD: rootpassword
     ports:
       - "27017:27017"
     volumes:
-      - mongodb_data_container:/data/db
+      - mongodb_data:/data/db
 
 volumes:
-  mongodb_data_container:
+  mongo_data:
       
   # redis:
   #   image: "redis:alpine"
